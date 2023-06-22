@@ -1,0 +1,13 @@
+{% autoescape off %}
+Hi {{ user.first_name }},
+Thanks for signing up to Great Kart!
+
+To set up your account, Please click on the link to confirm your registration,
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Thanks for using our site!
+
+Sincerely,
+Great Kart Team
+
+{% endautoescape %}
