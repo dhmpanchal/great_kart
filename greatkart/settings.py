@@ -14,7 +14,7 @@ import environ
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from decouple import config
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 env = environ.Env()
 environ.Env.read_env()
@@ -98,18 +98,18 @@ WSGI_APPLICATION = 'greatkart.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USERE'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST_NAME'),
-        'PORT': config('DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': config('DB_NAME'),
+    #     'USER': config('DB_USERE'),
+    #     'PASSWORD': config('DB_PASSWORD'),
+    #     'HOST': config('DB_HOST_NAME'),
+    #     'PORT': config('DB_PORT'),
+    # }
 }
 
 
