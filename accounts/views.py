@@ -24,7 +24,7 @@ import requests
 
 
 # Create your views here.
-class SignUpVire(View):
+class SignUpView(View):
 
   def get(self, request, *args, **kwargs):
     context = {}

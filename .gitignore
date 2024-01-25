@@ -18,5 +18,5 @@ cart/migrations/
 cart/__pycache__/
 order/migrations/
 order/__pycache__/
-db.sqlite3
+# db.sqlite3
 db2.sqlite3

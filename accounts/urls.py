@@ -1,9 +1,9 @@
 from django.urls import path
 
-from accounts.views import ChangePAsswordView, ForgotPAsswordView, LoginVire, MyOrderView, OrderDetailView, ProfileView, ResetPasswordConfirmView, SignUpVire, UpdatePasswordView, logout_view, AccountActivationView, DashboardView
+from accounts.views import ChangePAsswordView, ForgotPAsswordView, LoginVire, MyOrderView, OrderDetailView, ProfileView, ResetPasswordConfirmView, SignUpView, UpdatePasswordView, logout_view, AccountActivationView, DashboardView
 
 urlpatterns = [
-    path('register/', SignUpVire.as_view(), name="register_view"),
+    path('register/', SignUpView.as_view(), name="register_view"),
     path('login/', LoginVire.as_view(), name="login_view"),
     path('logout/', logout_view, name="logout_view"),
     path('activate/<uidb64>/<token>', AccountActivationView.as_view(), name='activate'),
